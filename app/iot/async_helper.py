@@ -7,5 +7,5 @@ async def run_sequence(*functions: Awaitable[Any]) -> None:
         await function
 
 
-async def run_parallel(*functions: Awaitable[Any]) -> list:
+async def run_parallel(*functions: Awaitable[Any]) -> list[Any]:
     return await asyncio.gather(*functions)
